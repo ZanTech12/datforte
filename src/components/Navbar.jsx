@@ -43,7 +43,7 @@ function Navbar() {
 
               <div className=' flex-col justify-center hidden lg:flex'>
                 <span className='font-bold '>DATFORTE INT'L SCHOOLS</span>
-                <span className='text-[13px] text-gray-500'>14, Bakare Estate Off<br/> Ahmadiya Bus-Stop, Abule Egba,<br/> Lagos, Nigeria. </span>
+                <span className='text-[13px] text-gray-500'>14, Ahmed Tijani Street, <br/> Ahmadiya Bus-Stop, Ijaiye,<br/> Lagos, Nigeria. </span>
               </div>
               <span className='lg:hidden block text-sm'></span>
             </span>
