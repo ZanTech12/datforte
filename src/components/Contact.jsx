@@ -22,7 +22,7 @@ function Contact() {
                     <div className="container mx-auto px-6 mt-5 lg:mt-0 lg:mb-0 mb-5">
                         <form ref={form} onSubmit={sendEmail} className='bg-white bg-opacity-95 max-w-2xl mx-auto p-10 rounded-3xl shadow-2xl transform hover:scale-105 transition duration-300'>
                             <h2 className='text-5xl font-extrabold mb-8 text-center text-blue-800 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-teal-400'>Contact Us</h2>
-                            <input type="email" name="email" placeholder='Your Email Address' className="w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required />
+                            <input type="email" name="email" placeholder='dontechiel@gmail.com' className="w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300" required />
                             <textarea name="message" placeholder='Your Message' className='w-full p-4 mb-6 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300' rows="5" required></textarea>
                             <button type='submit' className="w-full py-4 bg-gradient-to-r from-blue-500 to-teal-400 text-white rounded-lg shadow-lg hover:from-blue-600 hover:to-teal-500 transition duration-300 text-lg font-semibold transform hover:scale-105">Send Message</button>
                         </form>
