@@ -9,7 +9,7 @@ const About = () => {
         <div className="text-center mb-20">
           <h1 className="text-5xl font-bold mb-6 text-blue-800">DATFORTE INT'L SCHOOLS</h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Nurturing young minds and shaping future leaders since 1999
+            Nurturing young minds and shaping future leaders since the schools (both primary and secondary) have been founded
           </p>
         </div>
         
@@ -32,7 +32,7 @@ const About = () => {
         <div className="bg-white p-10 rounded-xl shadow-lg">
           <h2 className="text-3xl font-semibold mb-6 text-blue-700 text-center">Our Legacy</h2>
           <p className="text-lg text-gray-600 leading-relaxed">
-            Since our establishment in 1999, Datforte International Schools has grown into a premier institution known for its commitment to educational excellence. We've continuously evolved, integrating modern teaching methodologies and expanding our curriculum to meet the changing needs of our students. Our nurturing and dynamic learning environment has built a reputation that spans decades.
+            Since our establishment in 1999 (primary school) and 2004(secondary school), Datforte International Schools have grown into a premier institution known for its commitment to educational excellence. We've continuously evolved, integrating modern teaching methodologies and expanding our curriculum to meet the changing needs of our students. Our nurturing and dynamic learning environment has built a reputation that spans decades.
           </p>
         </div>
 

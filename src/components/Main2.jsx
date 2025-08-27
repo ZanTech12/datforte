@@ -20,7 +20,7 @@ function Main2() {
             <h1 className='font-bold text-3xl lg:text-5xl mb-4 text-white'>About Datforte Int'l School</h1>
             <p className='text-white text-lg lg:text-xl'>
               
-              Datforte International Schools, founded in 1999, is dedicated to providing quality education and holistic development. The school emphasizes academic excellence, critical thinking, and ethical values. It boasts modern infrastructure, including advanced science labs, spacious classrooms, a well-stocked library, and comprehensive sports facilities. Datforte aims to empower students with knowledge and skills for a successful future.
+              Datforte International Schools are dedicated to providing quality education and holistic development. The schools emphasize academic excellence, critical thinking, and ethical values. It boasts modern infrastructure, including advanced science labs, spacious classrooms, a well-stocked library, and comprehensive sports facilities. Datforte aims to empower students with knowledge and skills for a successful future.
             </p>
             <button className="bg-primary p-2 lg:px-6 lg:py-3 rounded-lg text-lg font-bold mt-5 text-light" onClick={downloadBroucher}>
               Download Brochure

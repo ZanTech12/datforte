@@ -44,7 +44,7 @@ function Contact() {
                     <div className="p-8 bg-white shadow-xl rounded-3xl hover:shadow-2xl transition duration-300 transform hover:scale-105 text-center">
                         <LocationOn className="text-5xl text-blue-500 mb-6 mx-auto" style={{fontSize:"3rem"}}/>
                         <h3 className="text-2xl font-semibold mb-4 text-center text-blue-800">Visit Us</h3>
-                        <p className="text-gray-600 text-center">14, Bakare Estate Off Ahmadiya Bus-Stop, Abule Egba, Lagos, Nigeria</p>
+                        <p className="text-gray-600 text-center">14, Ahmed Tijani Street Ahmadiyya Bus Stop, Ijaiye, Lagos, Nigeria</p>
                     </div>
                 </div>
             </div>

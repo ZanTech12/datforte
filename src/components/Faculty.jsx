@@ -13,28 +13,28 @@ const aboutData = [
    
   },
   {
-    name: "Jane Smith",
+    name: "Mr. Raphael Nwabuikwu",
     description: "Vice Principal",
-    image: "https://ichef.bbci.co.uk/news/943/cpsprodpb/1f5c/live/316a9df0-e05b-11ed-bc98-4bd262d15a9f.jpg", 
+    image: "https://ichef.bbci.co.uk/news/943/cpsprodpb/1f5c/live/316a9df0-e05b-11ed-bc98-4bd262d15a9f.jp", 
     quote: "Together, we can achieve greatness. Let’s work hand-in-hand to shape the future and build a thriving school environment.",
    
   },
   {
-    name: "Mrs Obinna Chinomnso",
+    name: "Mrs. Obinna Chinomnso",
     description: "Head of Primary School",
     image: hps, 
     quote: "Teaching is not just about imparting knowledge; it's about inspiring a love for learning and encouraging growth.",
    
   },
   {
-    name: "Mr Babatunde Kayode A.",
+    name: "Mr. Babatunde Kayode",
     description: "HOD Primary Section",
     image: hps1, 
     quote: "The beautiful thing about learning is that no one can take it away from you",
    
   },
   {
-    name: "Sophia Davis",
+    name: "Mrs. Bamigboye Esther",
     description: "The School Administrator",
     image: admin, 
     quote: 'Every challenge in education is an opportunity for growth; embrace it with open arms.',

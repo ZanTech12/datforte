@@ -40,9 +40,9 @@ const Students = () => {
         <div className="bg-white p-8 rounded-xl shadow-lg">
           <ul className="space-y-4">
             {[
-              { name: 'John Smith', achievement: 'National Level Math Olympiad Winner' },
-              { name: 'Sarah Lee', achievement: 'Gold Medalist in State Swimming Championship' },
-              { name: 'Tech Innovators Club', achievement: 'Winners of Inter-School Robotics Competition' }
+              { name: 'Ekesiobi Christabel', achievement: 'The Winner of Heritage Spelling Bee Competition 2024' },
+              { name: 'Selective Students', achievement: 'Participant in Nigeria Galaxy Quiz Competition 2025' },
+              { name: 'Selective Students', achievement: 'Participant in Agbado Oke Mathematics Competition 2025' }
             ].map((item, index) => (
               <li key={index} className="flex items-center">
                 <span className="w-3 h-3 bg-yellow-400 rounded-full mr-3"></span>
@@ -56,12 +56,12 @@ const Students = () => {
 
     
       <section>
-        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">Student Council</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-center text-indigo-700">THE SCHOOL BOARD OF DIRECTORS</h2>
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            { role: 'President', name: 'Amy Parker', grade: 'Grade 12', description: 'Amy leads the student council with a vision to enhance student engagement and academic success.' },
-            { role: 'Vice President', name: 'Rajiv Mehta', grade: 'Grade 11', description: 'Rajiv supports the president and coordinates various student initiatives and events.' },
-            { role: 'Secretary', name: 'Lisa Wong', grade: 'Grade 10', description: 'Lisa manages the student council\'s records and communication, ensuring smooth operations.' }
+            { role: 'Director 1', name: 'Mr. Dare Ijiwole', description: 'Education is not just about learning facts, but about shaping the character, confidence, and curiosity of every child. Our mission is to nurture minds and inspire futures.' },
+            { role: 'Director 2', name: 'Mr. Deji  Ijiwole', description: 'Every child deserves access to quality education, a safe environment, and the opportunity to thrive. We are committed to guiding the school toward that vision every day.' },
+            { role: 'Director 3', name: 'Mrs. Doyin Ijiwole',  description: 'Behind every successful student is a community that believes in their potential. As board members, we are proud to be part of that foundation.' }
           ].map((member, index) => (
             <div key={index} className="bg-white p-6 rounded-xl shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-1">
               <h3 className="text-xl font-semibold text-indigo-700 mb-2">{member.role}</h3>
