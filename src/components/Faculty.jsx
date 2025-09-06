@@ -3,6 +3,8 @@ import prin from "../assets/principal.jpg"
 import hps from "../assets/Head Of Primary.jpg"
 import hps1 from "../assets/HOD Primary Section.jpg"
 import admin from "../assets/admind.jpg"
+import vc1 from "../assets/vc.jpg"
+
 
 const aboutData = [
   {
@@ -15,7 +17,7 @@ const aboutData = [
   {
     name: "Mr. Raphael Nwabuikwu",
     description: "Vice Principal",
-    image: "https://ichef.bbci.co.uk/news/943/cpsprodpb/1f5c/live/316a9df0-e05b-11ed-bc98-4bd262d15a9f.jp", 
+    image: vc1,
     quote: "Together, we can achieve greatness. Let’s work hand-in-hand to shape the future and build a thriving school environment.",
    
   },

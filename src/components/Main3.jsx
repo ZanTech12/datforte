@@ -2,6 +2,7 @@ import React from 'react'
 import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
 import { Link } from 'react-router-dom';
 import dbanner from "../assets/dbanner.jpg"
+import dat from "../assets/datsch.jpg"
 
 function Main3() {
     return (
@@ -9,7 +10,7 @@ function Main3() {
             <div
                 className="parallax-bg   d-flex justify-content-center align-items-center  bg-center bg-no-repeat "
                 style={{
-                    backgroundImage: "url('https://wehco.media.clients.ellingtoncms.com/img/photos/2015/09/09/72682081_Springdale-High-File_t800.jpg')",
+                    backgroundImage: `url(${dat})`,
                 }}
             ></div>
             <div className="container-fluid bg-dark position-absolute text-light d-flex justify-content-center align-items-center h-100 w-100 bg-opacity-25 ">
