@@ -4,6 +4,8 @@ import hps from "../assets/Head Of Primary.jpg"
 import hps1 from "../assets/HOD Primary Section.jpg"
 import admin from "../assets/admind.jpg"
 import vc1 from "../assets/vc.jpg"
+import coun from "../assets/counsel.jpg"
+import hop from "../assets/hop.jpg"
 
 
 const aboutData = [
@@ -42,6 +44,21 @@ const aboutData = [
     quote: 'Every challenge in education is an opportunity for growth; embrace it with open arms.',
     
   },
+  {
+    name: "Mrs. Sokunbi",
+    description: "The School Counsellor",
+    image:coun , 
+    quote: 'You will face setbacks — everyone does. But every time you get back up, you become stronger, wiser, and more prepared for life beyond school.',
+    
+  },
+    {
+    name: "Mrs. Onadele",
+    description: "Head of the Nursery Section",
+    image:hop , 
+    quote: 'In these little hands lie the future. Every smile we nurture, every word we speak, and every moment we share helps shape a lifetime of confidence, kindness, and curiosity. Let’s build strong roots — one gentle day at a time.',
+    
+  },
+  
   
   //{
     //name: "David Wilson",
