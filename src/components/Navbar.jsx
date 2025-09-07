@@ -58,7 +58,7 @@ function Navbar() {
                   <a className="nav-link" href="#">ABOUT US</a>
                 </Link>
                 <Link to="/faculty" className="nav-item">
-                  <a className="nav-link " aria-current="page" href="#">FACULTY</a>
+                  <a className="nav-link " aria-current="page" href="#">DEPARTMENT</a>
                 </Link >
                 <Link to="/students" className="nav-item">
                   <a className="nav-link " aria-current="page" href="#">STUDENTS</a>
@@ -110,7 +110,7 @@ function Navbar() {
           </Link>
           <Link to="/faculty">
             <a href="#" className="text-white">
-              FACULTY
+              DEPARTMENT
             </a>
           </Link>
           <Link to="/students">

@@ -42,6 +42,7 @@ const aboutData = [
     quote: 'Every challenge in education is an opportunity for growth; embrace it with open arms.',
     
   },
+  
   //{
     //name: "David Wilson",
     //description: "Computer Science Teacher",
@@ -58,7 +59,7 @@ function Faculty() {
 
   return (
     <div className='container mx-auto px-4 py-16'>
-      <h1 className="text-4xl font-bold text-center mb-16 text-indigo-800">Our Faculty</h1>
+      <h1 className="text-4xl font-bold text-center mb-16 text-indigo-800">Our Department</h1>
 
      
       <div className="grid md:grid-cols-2 gap-8 mb-16">
@@ -100,7 +101,7 @@ function Faculty() {
      
       {otherFaculty.length > 0 && (
         <div>
-          <h2 className="text-3xl font-bold mb-8 text-center text-indigo-800">Our Dedicated Faculty</h2>
+          <h2 className="text-3xl font-bold mb-8 text-center text-indigo-800">Our Dedicated Designatory Office</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {otherFaculty.map((data, index) => (
               <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105">
@@ -115,9 +116,11 @@ function Faculty() {
             ))}
           </div>
         </div>
+        
       )}
     </div>
   );
 }
+
 
 export default Faculty;
