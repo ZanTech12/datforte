@@ -1,6 +1,12 @@
 import { Cancel } from '@mui/icons-material';
 import React, { useState } from 'react';
 import Modal from 'react-modal';
+import img1 from "../assets/sch1.jpg"
+import img2 from "../assets/sch2.jpg"
+import img3 from "../assets/sch3.jpg"
+import img4 from "../assets/sch4.jpg"
+import img5 from "../assets/sch5.jpg"
+import img6 from "../assets/sch6.jpg"
 
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -13,17 +19,13 @@ const Campus = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const campusImages = [
-    'https://upload.wikimedia.org/wikipedia/commons/a/a7/Springdale_High_School%2C_Arkansas.JPG',
-    'https://wehco.media.clients.ellingtoncms.com/img/photos/2015/09/09/72682081_Springdale-High-File_t800.jpg?90232451fbcadccc64a17de7521d859a8f88077d',
-    'https://media.tegna-media.com/assets/KFSM/images/39096167-e937-4126-a551-0e539a9e975b/39096167-e937-4126-a551-0e539a9e975b_1920x1080.jpg',
-    'https://har-bernhs.weebly.com/uploads/2/6/5/7/26574828/261266692.jpg',
-    'https://cmsv2-assets.apptegy.net/uploads/2600/file/206293/3c262193-675a-4505-a71d-77fc6762c718.jpeg',
-    'https://springdaleeducation.com/wp-content/uploads/2022/11/INFRASTRUCTURE-1.jpg',
+    img1, img2, img3, img4, img5,  img6,
+   
   ];
 
   const campusVideos = [
-    'https://www.youtube.com/embed/FUSJkqaHgYk?si=Nv40Vzc_Y4gA_7aO',
-    'https://www.youtube.com/embed/SxoVEOt_muA?si=J72T9TXqAzM9Ob6P',
+    'https://www.youtube.com/embed/dDU3FVPurQs?si=VXeJsxPdRx0Tl5P-',
+    'https://www.youtube.com/embed/R-50amaWCdg?si=DYhpAnlRMWXVu035',
   ];
 
   const openImageModal = (imageUrl, index) => {
@@ -59,7 +61,7 @@ const Campus = () => {
        
 
         <section>
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">School Showcase</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8">
             {campusImages.map((imageUrl, index) => (
               <div
@@ -81,7 +83,7 @@ const Campus = () => {
           </div>
         </section>
         <section className="mb-16">
-          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">Campus Video Showcase</h2>
+          <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">School Video Showcase</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {campusVideos.map((videoUrl, index) => (
               <div
