@@ -7,6 +7,9 @@ import img3 from "../assets/sch3.jpg"
 import img4 from "../assets/sch4.jpg"
 import img5 from "../assets/sch5.jpg"
 import img6 from "../assets/sch6.jpg"
+import ict1 from "../assets/ict1.jpg"
+import ict2 from "../assets/ict2.jpg"
+import engineer from "../assets/engineer.jpg"
 
 
 import 'react-lazy-load-image-component/src/effects/blur.css';
@@ -19,12 +22,13 @@ const Campus = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const campusImages = [
-    img1, img2, img3, img4, img5,  img6,
+    img1, img2, img3, img4, img5,  img6, ict1, ict2, engineer
    
   ];
 
   const campusVideos = [
     'https://www.youtube.com/embed/dDU3FVPurQs?si=VXeJsxPdRx0Tl5P-',
+    'https://www.youtube.com/embed/R-50amaWCdg?si=DYhpAnlRMWXVu035',
     'https://www.youtube.com/embed/R-50amaWCdg?si=DYhpAnlRMWXVu035',
   ];
 
@@ -165,6 +169,7 @@ const Campus = () => {
     </div>
   </div>
 </Modal>
+
 
       </div>
     </div>
