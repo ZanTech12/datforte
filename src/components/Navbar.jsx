@@ -82,7 +82,7 @@ function Navbar() {
                   <button className="btn shadow btn-primary">
                     <a
                       className="nav-link text-light"
-                      href="http://localhost/GOSFEM_school_software_updated_09_10_2022/open/login"
+                      href="https://nersapp.africa/org/datforte/auth"
                     >
                       Sign-In
                     </a>
@@ -99,9 +99,8 @@ function Navbar() {
               </div>
 
               <div
-                className={`fixed top-0 right-0 h-full bg-gray-800 text-white p-4 w-64 transform ${
-                  isOpen ? "translate-x-0" : "translate-x-full"
-                } transition-transform duration-300 ease-in-out z-50`}
+                className={`fixed top-0 right-0 h-full bg-gray-800 text-white p-4 w-64 transform ${isOpen ? "translate-x-0" : "translate-x-full"
+                  } transition-transform duration-300 ease-in-out z-50`}
               >
                 <div className="cursor-pointer text-2xl" onClick={toggleMenu}>
                   &times;
