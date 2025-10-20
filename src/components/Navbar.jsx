@@ -15,10 +15,10 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <nav className="fixed top-0 left-0 w-full bg-white shadow-md z-[1000]">
       {/* Top Banner */}
       <div className="hidden lg:flex items-center justify-between px-6 py-2 bg-gradient-to-br from-indigo-800 to-gray-800 text-white">
-        <h1 className="font-bold text-lg">DATFORTE INT'L SCHOOLS</h1>
+        <h1 className="font-bold text-lg text-center w-full">DATFORTE INT'L SCHOOLS</h1>
       </div>
 
       {/* Main Navbar */}
@@ -28,7 +28,7 @@ function Navbar() {
           <img
             src={logo}
             alt="School Logo"
-            className="rounded-full object-cover w-12 h-12 sm:w-14 sm:h-14"
+            className="rounded-full object-cover w-10 h-10 sm:w-12 sm:h-12"
           />
           <div className="hidden sm:flex flex-col leading-tight">
             <span className="font-semibold text-gray-800 text-sm sm:text-base">
@@ -64,7 +64,9 @@ function Navbar() {
 
           <a
             href="https://nersapp.africa/org/datforte/auth"
-            className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition-all duration-200"
           >
             Sign-In
           </a>
@@ -83,16 +85,16 @@ function Navbar() {
       {/* Mobile Menu Drawer */}
       <div
         className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 transform ${isOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-300 ease-in-out z-50`}
+          } transition-transform duration-300 ease-in-out z-[2000] overflow-y-auto`}
       >
         <div
-          className="text-right text-3xl font-bold pr-4 cursor-pointer"
+          className="text-right text-3xl font-bold pr-4 cursor-pointer mt-2"
           onClick={toggleMenu}
         >
           &times;
         </div>
 
-        <ul className="flex flex-col mt-8 space-y-5 px-6">
+        <ul className="flex flex-col mt-8 space-y-5 px-6 text-base font-medium">
           <Link to="/" onClick={toggleMenu}>HOME</Link>
           <Link to="/aboutus" onClick={toggleMenu}>ABOUT US</Link>
           <Link to="/faculty" onClick={toggleMenu}>DEPARTMENT</Link>
@@ -103,9 +105,12 @@ function Navbar() {
           <Link to="/campus" onClick={toggleMenu}>GLIMPSE</Link>
           <Link to="/contact" onClick={toggleMenu}>CONTACT US</Link>
 
+          {/* Sign-In Button (Mobile) */}
           <a
             href="https://nersapp.africa/org/datforte/auth"
-            className="bg-blue-600 text-white text-center py-2 rounded"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-blue-600 text-white text-center py-2 rounded-lg mt-3 hover:bg-blue-700 transition-all duration-200"
           >
             Sign-In
           </a>
