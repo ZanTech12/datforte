@@ -22,13 +22,13 @@ const Campus = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const campusImages = [
-    img1, img2, img3, img4, img5,  img6, ict1, ict2, engineer
-   
+    img1, img2, img3, img4, img5, img6, ict1, ict2, engineer
+
   ];
 
   const campusVideos = [
+    'https://www.youtube.com/embed/komRxiInLiw',
     'https://www.youtube.com/embed/dDU3FVPurQs?si=VXeJsxPdRx0Tl5P-',
-    'https://www.youtube.com/embed/R-50amaWCdg?si=DYhpAnlRMWXVu035',
     'https://www.youtube.com/embed/R-50amaWCdg?si=DYhpAnlRMWXVu035',
   ];
 
@@ -62,7 +62,7 @@ const Campus = () => {
   return (
     <div className="bg-gray-100 py-16">
       <div className="container mx-auto text-center px-4">
-       
+
 
         <section>
           <h2 className="text-3xl lg:text-5xl font-bold mb-8 text-indigo-700">School Showcase</h2>
@@ -144,31 +144,31 @@ const Campus = () => {
         </Modal>
 
 
-  <Modal
-  isOpen={!!selectedVideo}
-  onRequestClose={closeVideoModal}
-  contentLabel="Video Player"
-  className="modal flex flex-col items-center bg-dark bg-opacity-25 rounded-lg justify-center"
-  overlayClassName="overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
->
-  <div className="w-full h-full flex items-center justify-center">
-    <div className="relative">
-      {selectedVideo && (
-        <iframe
-          src={selectedVideo}
-          title="Campus Video"
-          className="lg:w-[1000px] lg:h-[600px] w-[400px] h-[300px] rounded-xl"
-          allowFullScreen
-        ></iframe>
-      )}
-      <Cancel
-        onClick={closeVideoModal}
-        className="absolute top-4 right-4 cursor-pointer text-white text-3xl bg-gray-700 bg-opacity-75 rounded-full p-1"
-        style={{ fontSize: '2rem' }}
-      />
-    </div>
-  </div>
-</Modal>
+        <Modal
+          isOpen={!!selectedVideo}
+          onRequestClose={closeVideoModal}
+          contentLabel="Video Player"
+          className="modal flex flex-col items-center bg-dark bg-opacity-25 rounded-lg justify-center"
+          overlayClassName="overlay fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center"
+        >
+          <div className="w-full h-full flex items-center justify-center">
+            <div className="relative">
+              {selectedVideo && (
+                <iframe
+                  src={selectedVideo}
+                  title="Campus Video"
+                  className="lg:w-[1000px] lg:h-[600px] w-[400px] h-[300px] rounded-xl"
+                  allowFullScreen
+                ></iframe>
+              )}
+              <Cancel
+                onClick={closeVideoModal}
+                className="absolute top-4 right-4 cursor-pointer text-white text-3xl bg-gray-700 bg-opacity-75 rounded-full p-1"
+                style={{ fontSize: '2rem' }}
+              />
+            </div>
+          </div>
+        </Modal>
 
 
       </div>
