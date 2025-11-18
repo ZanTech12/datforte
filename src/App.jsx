@@ -71,7 +71,7 @@ function App() {
             }
           />
 
-          <Route
+          <Route>
             exact
             path='/students'
             element={
@@ -82,7 +82,7 @@ function App() {
                 <Main3 />
               </>
             }
-          />
+          </Route>
 
           <Route
             exact
