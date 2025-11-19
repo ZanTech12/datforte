@@ -1,8 +1,8 @@
+import React from 'react';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { KeyboardArrowUp } from '@mui/icons-material';
-
 import Coursoul from './components/Coursoul';
 import Main1 from './components/Main1';
 import Main2 from './components/Main2';
@@ -71,6 +71,7 @@ function App() {
             }
           />
 
+          {/* Fixed Route component syntax */}
           <Route
             exact
             path='/students'
