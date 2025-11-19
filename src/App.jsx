@@ -1,18 +1,4 @@
-import React from 'react'
-import MaintenanceNotice from './MaintenanceNotice'
-
-const App = () => {
-  return (
-    <div>
-      <MaintenanceNotice />
-    </div>
-  )
-}
-
-export default App
-
-
-/*import './App.css';
+import './App.css';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import { KeyboardArrowUp } from '@mui/icons-material';
@@ -196,4 +182,4 @@ function App() {
   );
 }
 
-export default App;*/
+export default App;
