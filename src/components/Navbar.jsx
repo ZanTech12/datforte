@@ -55,11 +55,11 @@ function Navbar() {
           </div>
         </Link>
 
-        {/* --- DESKTOP LINKS WITH ICONS AND EFFECTS --- */}
+        {/* --- DESKTOP LINKS WITH REDUCED TEXT SIZE --- */}
         <ul className="hidden lg:flex items-center space-x-1">
           <Link
             to="/"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/"
               ? "bg-blue-100 text-blue-700 shadow-sm"
               : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
               }`}
@@ -69,7 +69,7 @@ function Navbar() {
           </Link>
           <Link
             to="/aboutus"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/aboutus"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/aboutus"
               ? "bg-blue-100 text-blue-700 shadow-sm"
               : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
               }`}
@@ -79,7 +79,7 @@ function Navbar() {
           </Link>
           <Link
             to="/faculty"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/faculty"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/faculty"
               ? "bg-blue-100 text-blue-700 shadow-sm"
               : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
               }`}
@@ -89,7 +89,7 @@ function Navbar() {
           </Link>
           <Link
             to="/students"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/students"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/students"
               ? "bg-blue-100 text-blue-700 shadow-sm"
               : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
               }`}
@@ -100,7 +100,7 @@ function Navbar() {
 
           <select
             onChange={handleSelectChange}
-            className="border border-gray-300 rounded-md px-3 py-2 text-sm text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-gray-300 rounded-md px-3 py-2 text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">More</option>
             <option value="/events">Events</option>
@@ -111,7 +111,7 @@ function Navbar() {
 
           <Link
             to="/contact"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/contact"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/contact"
               ? "bg-blue-100 text-blue-700 shadow-sm"
               : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
               }`}
@@ -124,7 +124,7 @@ function Navbar() {
             href="http://schoolapp.ng"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-2 rounded-md text-sm font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
+            className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white px-4 py-2 rounded-md text-xs font-medium shadow-md hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
           >
             Sign-In
           </a>
@@ -152,7 +152,7 @@ function Navbar() {
           &times;
         </div>
 
-        <ul className="flex flex-col mt-8 space-y-1 px-4 text-base font-medium">
+        <ul className="flex flex-col mt-8 space-y-1 px-4 text-sm font-medium">
           <Link
             to="/"
             onClick={toggleMenu}
