@@ -29,7 +29,7 @@ function Navbar() {
       </div>
 
       {/* Main Navbar */}
-      <div className="flex items-center justify-between px-4 md:px-8 py-3 bg-white">
+      <div className="flex items-center justify-between px-4 md:px-8 py-1 bg-white">
         {/* --- REDESIGNED LOGO + NAME SECTION (FURTHER REDUCED SIZE) --- */}
         <Link to="/" className="flex items-center space-x-3 group">
           {/* Logo Container with Background Effect */}
