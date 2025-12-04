@@ -63,7 +63,7 @@ function Navbar() {
           </Link>
 
           <a
-            href="https://nersapp.africa/org/datforte/auth"
+            href="http://schoolapp.ng"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white px-4 py-1 rounded hover:bg-blue-700 transition-all duration-200"
@@ -107,7 +107,7 @@ function Navbar() {
 
           {/* Sign-In Button (Mobile) */}
           <a
-            href="https://nersapp.africa/org/datforte/auth"
+            href="http://schoolapp.ng"
             target="_blank"
             rel="noopener noreferrer"
             className="bg-blue-600 text-white text-center py-2 rounded-lg mt-3 hover:bg-blue-700 transition-all duration-200"

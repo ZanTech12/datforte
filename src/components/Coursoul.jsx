@@ -3,124 +3,116 @@ import myImage from "../assets/datforte school.jpg";
 import myStudents from "../assets/students.jpg";
 import myAds from "../assets/ads.jpg";
 
+const slides = [
+  {
+    image: myImage,
+    title: "DATFORTE INT'L SCH",
+    subtitle: "Situated around the axis of Ahmadiyyah",
+  },
+  {
+    image: myStudents,
+    title: "Nurturing Young Minds",
+    subtitle: "A community of learners and leaders",
+  },
+  {
+    image: myAds,
+    title: "Join Our Community",
+    subtitle: "Building a brighter future, one student at a time.",
+  },
+];
+
 function Coursoul() {
-  const images = [myImage, myStudents, myAds];
+  const [currentIndex, setCurrentIndex] = useState(0);
 
-  const [positions, setPositions] = useState(
-    images.map(() => ({ x: 50, y: 50 }))
-  );
-
-  // Smooth pan animation (not random jump)
   useEffect(() => {
     const interval = setInterval(() => {
-      setPositions((prev) =>
-        prev.map((pos) => ({
-          x: (pos.x + (Math.random() * 20 - 10) + 100) % 100, // gentle left/right
-          y: (pos.y + (Math.random() * 20 - 10) + 100) % 100, // gentle up/down
-        }))
-      );
-    }, 3000); // update every 3 seconds
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index);
+  };
+
+  const goToPrevious = () => {
+    const isFirstSlide = currentIndex === 0;
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  };
+
+  const goToNext = () => {
+    const isLastSlide = currentIndex === slides.length - 1;
+    const newIndex = isLastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex);
+  };
+
   return (
-    <div
-      id="carouselExampleAutoplaying"
-      className="carousel slide"
-      data-bs-ride="carousel"
-      data-bs-interval="5000" // auto change slide every 5s
-    >
-      <div className="carousel-inner">
-
-        {/* Slide 1 */}
-        <div
-          className="carousel-item active"
-          style={{
-            backgroundImage: `url(${myImage})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: `${positions[0].x}% ${positions[0].y}%`,
-            backgroundSize: "110%",        // slight zoom improves effect
-            transition: "background-position 3s ease-in-out",
-          }}
-        >
-          <div className="h-[25rem] lg:h-[40rem]">
-            <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center">
-              <h1 className="text-xl lg:text-5xl font-bold text-light text-center">
-                DATFORTE INT'L SCH
+    <div className="relative w-full h-[25rem] lg:h-[40rem] overflow-hidden">
+      <div
+        className="flex h-full transition-transform duration-1000 ease-in-out"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {slides.map((slide, index) => (
+          <div key={index} className="w-full flex-shrink-0 relative">
+            {/* This image will occupy the entire div */}
+            <img
+              src={slide.image}
+              alt={`Slide ${index + 1}`}
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+            <div className="absolute inset-0 flex flex-col justify-center items-center text-center p-4">
+              <h1
+                className={`text-3xl lg:text-6xl font-bold text-white mb-4 transition-all duration-1000 delay-300 ${currentIndex === index
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+                  }`}
+              >
+                {slide.title}
               </h1>
-              <h4 className="lg:text-xl text-lg text-light mt-3 font-bold">
-                Situated around the axis of Ahmadiyyah
+              <h4
+                className={`text-lg lg:text-2xl font-light text-white transition-all duration-1000 delay-500 ${currentIndex === index
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-4"
+                  }`}
+              >
+                {slide.subtitle}
               </h4>
             </div>
           </div>
-        </div>
-
-        {/* Slide 2 */}
-        <div
-          className="carousel-item"
-          style={{
-            backgroundImage: `url(${myStudents})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: `${positions[1].x}% ${positions[1].y}%`,
-            backgroundSize: "110%",
-            transition: "background-position 3s ease-in-out",
-          }}
-        >
-          <div className="h-[25rem] lg:h-[40rem]">
-            <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center">
-              <h1 className="text-xl lg:text-5xl font-bold text-light text-center">
-                Datforte Int'l School
-              </h1>
-              <h4 className="lg:text-xl text-lg text-light mt-3 font-bold">
-                Ahmadiyyah axis
-              </h4>
-            </div>
-          </div>
-        </div>
-
-        {/* Slide 3 */}
-        <div
-          className="carousel-item"
-          style={{
-            backgroundImage: `url(${myAds})`,
-            backgroundRepeat: "no-repeat",
-            backgroundPosition: `${positions[2].x}% ${positions[2].y}%`,
-            backgroundSize: "110%",
-            transition: "background-position 3s ease-in-out",
-          }}
-        >
-          <div className="h-[25rem] lg:h-[40rem]">
-            <div className="bg-black bg-opacity-50 w-full h-full flex flex-col justify-center items-center">
-              <h1 className="text-xl lg:text-5xl font-bold text-light text-center">
-                Datforte Int'l Schools
-              </h1>
-              <h4 className="lg:text-xl text-lg text-light mt-3 font-bold">
-                Ahmadiyyah axis
-              </h4>
-            </div>
-          </div>
-        </div>
+        ))}
       </div>
 
-      {/* Navigation Arrows */}
       <button
-        className="carousel-control-prev hidden lg:block"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="prev"
+        onClick={goToPrevious}
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-300"
       >
-        <span className="carousel-control-prev-icon"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
       </button>
 
       <button
-        className="carousel-control-next hidden lg:block"
-        type="button"
-        data-bs-target="#carouselExampleAutoplaying"
-        data-bs-slide="next"
+        onClick={goToNext}
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-colors duration-300"
       >
-        <span className="carousel-control-next-icon"></span>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
       </button>
+
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        {slides.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => goToSlide(index)}
+            className={`w-3 h-3 rounded-full transition-all duration-300 ${currentIndex === index ? "bg-white w-8" : "bg-white/50 hover:bg-white/75"
+              }`}
+          ></button>
+        ))}
+      </div>
     </div>
   );
 }
