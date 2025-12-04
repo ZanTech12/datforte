@@ -49,14 +49,14 @@ function Coursoul() {
   };
 
   return (
-    <div className="relative w-full h-[25rem] lg:h-[40rem] overflow-hidden">
+    // --- mt-8 class added here ---
+    <div className="relative w-full h-[25rem] lg:h-[40rem] overflow-hidden mt-8">
       <div
         className="flex h-full transition-transform duration-1000 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {slides.map((slide, index) => (
           <div key={index} className="w-full flex-shrink-0 relative">
-            {/* This image will occupy the entire div */}
             <img
               src={slide.image}
               alt={`Slide ${index + 1}`}
