@@ -66,3 +66,9 @@
 .parallax-container:hover .parallax-bg {
   transform: translate3d(0, -60%, 0);
 }
+
+html,
+body {
+  overflow: auto;
+  height: 100%;
+}
