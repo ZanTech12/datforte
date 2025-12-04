@@ -11,7 +11,7 @@ function Main1() {
     // Show admission alert after a short delay when component mounts
     const timer = setTimeout(() => {
       if (showAdmissionAlert) {
-        alert('📢 ADMISSION ALERT! 📢\n\nAdmission is currently ongoing at Datforte International Schools for the 2023/2024 academic session.\n\nLimited spaces available!\n\nApply now to secure your child\'s future at our prestigious institution.\n\nVisit our admissions office or call us for more information.');
+        alert('📢 ADMISSION ALERT! 📢\n\nAdmission is currently ongoing at Datforte International Schools for the 2025/2026 academic session.\n\nLimited spaces available!\n\nApply now to secure your child\'s future at our prestigious institution.\n\nVisit our admissions office or call us for more information.');
         // Set to false so the alert doesn't show again on re-renders
         setShowAdmissionAlert(false);
       }
@@ -28,7 +28,7 @@ function Main1() {
           <svg className="w-5 h-5 mr-2 animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
           </svg>
-          <span className="font-bold text-sm md:text-base">ADMISSION ONGOING FOR 2023/2024 ACADEMIC SESSION - APPLY NOW!</span>
+          <span className="font-bold text-sm md:text-base">ADMISSION ONGOING FOR 2025/2026 ACADEMIC SESSION - APPLY NOW!</span>
         </div>
       </div>
 
