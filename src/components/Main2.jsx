@@ -12,7 +12,7 @@ function Main2() {
   const downloadBroucher = () => {
     const anchor = document.createElement('a');
     anchor.href = brochu;
-    anchor.download = 'broucher.pdf';
+    anchor.download = '';
     anchor.click();
   };
 

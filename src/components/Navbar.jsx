@@ -16,8 +16,8 @@ function Navbar() {
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full bg-white shadow-lg z-[1000]">
-      {/* Top Banner */}
+    <nav className="fixed top-0 left-0 w-full shadow-lg z-[1000]">
+      {/* Top Banner - This will remain opaque */}
       <div className="hidden lg:flex items-center justify-between px-6 py-2 bg-gradient-to-r from-indigo-800 via-purple-800 to-indigo-900 text-white">
         <div className="flex items-center space-x-2">
           <h1 className="font-bold text-xl tracking-wide">DATFORTE INT'L SCHOOLS</h1>
@@ -28,11 +28,10 @@ function Navbar() {
         </div>
       </div>
 
-      {/* Main Navbar */}
-      <div className="flex items-center justify-between px-4 md:px-8 py-1 bg-white">
-        {/* --- REDESIGNED LOGO + NAME SECTION (FURTHER REDUCED SIZE) --- */}
+      {/* Main Navbar - This is now with a subtle dark background */}
+      <div className="flex items-center justify-between px-4 md:px-8 py-1 bg-gray-900/50 backdrop-blur-sm">
+        {/* --- LOGO + NAME SECTION --- */}
         <Link to="/" className="flex items-center space-x-3 group">
-          {/* Logo Container with Background Effect */}
           <div className="relative p-0.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 shadow-lg group-hover:shadow-xl transition-shadow duration-300">
             <div className="p-0.5 bg-white rounded-full">
               <img
@@ -42,26 +41,24 @@ function Navbar() {
               />
             </div>
           </div>
-
-          {/* School Name and Address */}
           <div className="hidden sm:flex flex-col leading-tight">
-            <span className="font-bold text-gray-800 text-base sm:text-lg bg-gradient-to-r from-blue-600 to-indigo-700 bg-clip-text text-transparent">
+            <span className="font-bold text-gray-100 text-base sm:text-lg shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
               DATFORTE INT'L SCHOOLS
             </span>
-            <span className="text-xs text-gray-500 flex items-center">
-              <LocationOn className="text-blue-500 mr-1" fontSize="inherit" />
+            <span className="text-xs text-gray-300 flex items-center shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
+              <LocationOn className="text-gray-400 mr-1" fontSize="inherit" />
               14, Ahmed Tijani St, Ahmadiya Bus-Stop, Lagos
             </span>
           </div>
         </Link>
 
-        {/* --- DESKTOP LINKS WITH REDUCED TEXT SIZE --- */}
+        {/* --- DESKTOP LINKS --- */}
         <ul className="hidden lg:flex items-center space-x-1">
           <Link
             to="/"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/"
-              ? "bg-blue-100 text-blue-700 shadow-sm"
-              : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${location.pathname === "/"
+              ? "bg-white/20 text-white font-bold"
+              : "text-gray-100 hover:bg-white/20 hover:text-white"
               }`}
           >
             <Home fontSize="small" />
@@ -69,9 +66,9 @@ function Navbar() {
           </Link>
           <Link
             to="/aboutus"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/aboutus"
-              ? "bg-blue-100 text-blue-700 shadow-sm"
-              : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${location.pathname === "/aboutus"
+              ? "bg-white/20 text-white font-bold"
+              : "text-gray-100 hover:bg-white/20 hover:text-white"
               }`}
           >
             <Info fontSize="small" />
@@ -79,9 +76,9 @@ function Navbar() {
           </Link>
           <Link
             to="/faculty"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/faculty"
-              ? "bg-blue-100 text-blue-700 shadow-sm"
-              : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${location.pathname === "/faculty"
+              ? "bg-white/20 text-white font-bold"
+              : "text-gray-100 hover:bg-white/20 hover:text-white"
               }`}
           >
             <Business fontSize="small" />
@@ -89,9 +86,9 @@ function Navbar() {
           </Link>
           <Link
             to="/students"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/students"
-              ? "bg-blue-100 text-blue-700 shadow-sm"
-              : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${location.pathname === "/students"
+              ? "bg-white/20 text-white font-bold"
+              : "text-gray-100 hover:bg-white/20 hover:text-white"
               }`}
           >
             <Groups fontSize="small" />
@@ -100,20 +97,20 @@ function Navbar() {
 
           <select
             onChange={handleSelectChange}
-            className="border border-gray-300 rounded-md px-3 py-2 text-xs text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="border border-white/30 bg-white/10 text-gray-100 rounded-md px-3 py-2 text-xs focus:outline-none focus:ring-2 focus:ring-white/50 shadow-[0_1px_2px_rgba(0,0,0,0.5)]"
           >
-            <option value="">More</option>
-            <option value="/events">Events</option>
-            <option value="/curriculum">Academics</option>
-            <option value="/moto">Mission & Motto</option>
-            <option value="/campus">Glimpse</option>
+            <option value="" className="text-gray-800">More</option>
+            <option value="/events" className="text-gray-800">Events</option>
+            <option value="/curriculum" className="text-gray-800">Academics</option>
+            <option value="/moto" className="text-gray-800">Mission & Motto</option>
+            <option value="/campus" className="text-gray-800">Glimpse</option>
           </select>
 
           <Link
             to="/contact"
-            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 ${location.pathname === "/contact"
-              ? "bg-blue-100 text-blue-700 shadow-sm"
-              : "text-gray-700 hover:bg-blue-50 hover:text-blue-600 hover:shadow-sm"
+            className={`flex items-center space-x-2 px-3 py-2 rounded-md text-xs font-medium transition-all duration-200 transform hover:scale-105 shadow-[0_1px_2px_rgba(0,0,0,0.5)] ${location.pathname === "/contact"
+              ? "bg-white/20 text-white font-bold"
+              : "text-gray-100 hover:bg-white/20 hover:text-white"
               }`}
           >
             <ContactPhone fontSize="small" />
@@ -133,14 +130,14 @@ function Navbar() {
         {/* Mobile Menu Button */}
         <div className="lg:hidden">
           <Menu
-            className="text-gray-800 cursor-pointer"
+            className="text-gray-100 cursor-pointer"
             onClick={toggleMenu}
             fontSize="large"
           />
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
+      {/* Mobile Menu Drawer (remains the same) */}
       <div
         className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 transform ${isOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-300 ease-in-out z-[2000] overflow-y-auto`}
@@ -163,6 +160,7 @@ function Navbar() {
           >
             HOME
           </Link>
+          {/* ... other mobile links ... */}
           <Link
             to="/aboutus"
             onClick={toggleMenu}
