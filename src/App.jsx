@@ -21,6 +21,7 @@ import Events from './components/Events';
 import Curriculum from './components/Curriculum';
 import Faculty from './components/Faculty';
 import Students from './components/Students';
+import AdmissionForm from './components/AdmissionForm'; // Import the AdmissionForm component
 
 function App() {
   const [isVisible, setIsVisible] = useState(false);
@@ -162,6 +163,17 @@ function App() {
                 <Main2 />
                 <Checkout />
                 <Main3 />
+              </>
+            }
+          />
+
+          {/* Admission Form Route */}
+          <Route
+            exact
+            path='/admission'
+            element={
+              <>
+                <AdmissionForm />
               </>
             }
           />
